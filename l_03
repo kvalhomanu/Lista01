@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class Questao03{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		float p1, p2, p3;					//Inicializa as variaveis que vão armazenar as notas
+		float peso1 = 0.2F, peso2 = 0.3F, peso3 = 0.5F;		//Inicializa as variaveis que armazenam os pesos das provas
+		
+		System.out.println("Informe a primeira nota: ");
+		p1 = sc.nextInt();					//Recebe da entrada pradão e armazena a primeira nota
+		System.out.println("Informe a segunda nota: ");
+		p2 = sc.nextInt();					//Recebe da entrada pradão e armazena a segunda nota
+		System.out.println("Informe a terceira nota: ");
+		p3 = sc.nextInt();					//Recebe da entrada pradão e armazena a terceira nota
+		
+		float media = (p1*peso1)+(p2*peso2)+(p3*peso3);		//Variavel que realiza e armazena o calculo da media
+		
+		System.out.println("A media do aluno é: " + media);
+	}
+}
