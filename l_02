@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+class Questao02{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int ano_atual = 2017;					    //Variavel que armazena o ano atual
+
+		System.out.println("Informe seu ano de nascimento: ");
+		int ano_nascimento = sc.nextInt();			    //Variavel que ira armazenar o ano de nascimento do usuario
+		
+		int idade_atual = ano_atual - ano_nascimento;		    //Variavel que calcula e armazena a idade do usuario
+		
+		System.out.println("Sua idade atual é de: " + idade_atual); 
+	}
+}
