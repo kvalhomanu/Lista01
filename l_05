@@ -3,12 +3,12 @@ import java.util.Scanner;
 class Questao05{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		int data;
+		int data;				//Inicializa a variavel que ira armazenar o mes em decimal
 	
-		System.out.println("Informe o mês: ");
-		data = sc.nextInt();
+		System.out.println("Informe o mÄ™s: ");
+		data = sc.nextInt();			//Recebe da entrada padrÃ£o e armazena o valor decimal do mes
 
-		switch (data) {
+		switch (data) {				//Responsavel por indentificar o mes em decimal, e imprimir o nome do mes
 			case 1:
 				System.out.println("Janeiro");
 				break;
@@ -16,7 +16,7 @@ class Questao05{
 				System.out.println("Fevereiro");
 				break;
 			case 3:
-				System.out.println("Março");
+				System.out.println("MarÃ§o");
 				break;
 			case 4:
 				System.out.println("Abril");
@@ -46,7 +46,7 @@ class Questao05{
 				System.out.println("Dezembro");
 				break;
 			default:
-				System.out.println("Mês Invalido");
+				System.out.println("MÄ™s Invalido");
 
 		}
 		
