@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Questao06{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		float diaria,taxa = 60.0F;				//Inicializa as variaveis do tipo float
+		double valor;						//Inicializa as variavel que ira armazenar o valor total da conta
+		String nome;						//Inicializa as variavel que ira armazenar o nome do usuario
+		
+		System.out.println("Informe seu nome: ");
+		nome = sc.next();					//Recebe da entrada padrão e armazena o nome do usuario
+		
+		System.out.println("Informe a quantidade de diarias desejadas: ");
+		diaria = sc.nextFloat();				//Recebe da entrada padrão e armazena a quantidade de diarias
+		
+		if(diaria < 15){					//Condicao para diarias menores que 15 dias
+			valor = (taxa + 8) * diaria;
+			System.out.println("cliente: " + nome + "\n valor:" + valor + " R$");
+			}
+		else if(diaria == 15){					//Condicao para diarias iguais a 15 dias
+			valor = (taxa + 6) * diaria;
+			System.out.println("cliente: " + nome + "\n valor:" + valor + " R$");
+			}
+		else{							//Condicao para diarias maiores que 15 dias
+			valor = (taxa + 5.5) * diaria;
+			System.out.println("cliente: " + nome + "\n valor:" + valor + " R$");
+			}
+	}
+}
