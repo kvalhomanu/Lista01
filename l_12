@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+class Questao12{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int numero,quadrado,cubo;		//Inicializa as variaveis do tipo inteiro
+	
+		System.out.println("Informe o numero: ");
+		numero = sc.nextInt();			//Variavel que recebe da entrada padrao e armazena o numero
+
+		quadrado = numero*numero;		//variavel que calcula e armazena o quadrado do numero
+		cubo = quadrado*numero;			//variavel que calcula e armazena o cubo do numero
+
+		System.out.println("Numero: " + numero + "\n Quadrado: " + quadrado + "\n Cubo: " + cubo);
+	}
+}
