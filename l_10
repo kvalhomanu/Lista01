@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class Questao10{
+	public static void main(String[] agrs){
+		Scanner sc = new Scanner(System.in);
+		int i;					//Inicializa a variavel do tipo inteiro
+		float resultado = 10F,numero;		//Inicializa a variavel do tipo float
+		
+		System.out.println("Informe o numero a ser dividido:");
+		numero = sc.nextFloat();		//variavel que recebe da entrada padrao e armazena o numero a ser dividido
+		
+		resultado = numero;			//Variavel recebe o valor informado para iniciar a divisao
+
+		for(i=0;resultado>1;i++){       	//Laço que realiza as divisoes sucessivas por dois
+			resultado = resultado/2;	//Variavel que realiza o calculo e armazena o valor
+		}
+	
+		System.out.println("Numero: " + numero + "\n Nº Divisoes realizadas: " + i + "\n Ultimo resultado: " + resultado);
+	}
+}
