@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+class Questao11{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int quantidade,codigo = 100;							//Inicializa as variaveis do tipo inteiro
+		double valor = 0;										//Inicializa a variavel do tipo double
+		
+		System.out.println("Codigo --------- Produto --------- valor \n 10        Pastel de carne          1,50 \n 11        Coxinha de frango        1,80 \n 12        Empada de frango         1,90 \n 20        Hamburguer               10,00 \n 30        Pizza                    8,00 \n 50        Suco                     2,50 ");	
+
+		while(codigo != 0){										//Laço para realizar as acoes de compra de produtos
+			System.out.println("Informe o codigo: ");
+			codigo = sc.nextInt();								//Recebe da entrada padrao o codigo do produto
+			
+			if(codigo != 0){									//Condicao para confirmar compra
+				System.out.println("Informe a quantidade: ");
+				quantidade = sc.nextInt();						//Recebe da entrada padrao a quantidade do produto	
+
+				switch (codigo) {								//Listagem de codigos para cada produto
+					case 10:									//Para Pastel de carne
+						valor = valor + (quantidade * 1.50);	//Variavel calcula e armazena o valor parcial atual
+						System.out.println(" valor parcial:" + valor + "R$");
+						break;
+					case 11:									//Para Cozinha de frango
+						valor = valor + (quantidade * 1.80);	//Variavel calcula e armazena o valor parcial atual
+						System.out.println(" valor parcial:" + valor + "R$");
+						break;
+					case 12:									//Para Empada de frango
+						valor = valor + (quantidade * 1.90);	//Variavel calcula e armazena o valor parcial atual
+						System.out.println(" valor parcial:" + valor + "R$");
+						break;
+					case 20:									//Para Hamburguer
+						valor = valor + (quantidade * 10.00);	//Variavel calcula e armazena o valor parcial atual
+						System.out.println(" valor parcial:" + valor + "R$");
+						break;
+					case 30:									//Para Pizza
+						valor = valor + (quantidade * 8.00);	//Variavel calcula e armazena o valor parcial atual
+						System.out.println(" valor parcial:" + valor + "R$");
+						break;
+					case 50:									//Para Suco
+						valor = valor + (quantidade * 2.50);	//Variavel calcula e armazena o valor parcial atual
+						System.out.println(" valor parcial:" + valor + "R$");
+						break;
+						
+					default:									//Caso seja informado um codigo nao cadastrado
+						System.out.println("\n ------ Codigo Invalido ------ \n");
+						break;
+				}
+				System.out.println("\n Para encerrar digite o codigo '0' \n ");
+			}
+		}
+		if(valor>50.00){										//Condicao para acrescimo de desconto caso a conta ultrapasse 50,00RS
+			valor = valor*0.05;
+			System.out.println(" valor total:" + valor + "R$");
+		}
+		else{													//Condicao caso a conta nao ultrapasse os 50,00RS
+			System.out.println(" valor total:" + valor + "R$");
+		}
+	}
+}
