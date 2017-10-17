@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class Questao09{
+	public static void main(String[] agrs){
+		Scanner sc = new Scanner(System.in);
+		int num1,num2,maior,menor,i,par = 0,impar = 0,soma; 	//Inicializacao das variaveis do tipo inteiro
+		
+		System.out.println("Informe o primeiro numero:");
+		num1 = sc.nextInt();					//Variavel que recebe da entrada padrao e armazena o primeiro nº
+		System.out.println("Informe o segundo numero:");
+		num2 = sc.nextInt();					//Variavel que recebe da entrada padrao e armazena o segundo nº
+
+		if(num1>num2){						//Condicao para reordenacao dos valores
+			maior = num1;				
+			menor = num2;
+			}
+		else{							//Condicao para ordenacao dos valore
+			maior = num2;
+			menor = num1;
+			}
+		
+		for(i = menor+1; i<maior;i++){				//Laço para contabilizacao de pares e impares entre os valores
+			if((i % 2) == 0){ 	
+				par++;
+				}
+			else{
+				impar++;
+				}		
+			}
+		soma = menor + maior;					//variavel que realiza e armazena a soma dos valores
+		System.out.println("Pares: " + par + " \n Impares: " + impar + "\n Soma: "+ soma);	
+
+	}	
+}
