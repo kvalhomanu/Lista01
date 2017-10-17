@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class Questao08{
+	public static void main(String[] args){
+    		Scanner sc = new Scanner(System.in);	
+		int soma = 0,maior = 0,menor = 100000;			//Inicializa as variaveis do tipo inteiro
+		float media;						//Inicializa as variaveis do tipo float
+
+		ArrayList<Integer> valores = new ArrayList<Integer>(10);
+
+    		for(int i = 1; i <= 10; i++){
+			System.out.println("Informe o " + i + " valor: "); 
+			valores.add(sc.nextInt());			//Ira receber os valores da entrada padrao e armazena no array
+   		}
+
+    		for(int j = 0; j < 10; j++){
+			int atual = valores.get(j);
+			soma = soma + atual;				//Variavel que realiza e armazena as somas dos valores do array
+			
+			if(atual > maior){				//Codincao para defenir o maior valor
+				maior = atual;				//Variavel que recebe o maior valor até o momento
+			}
+			if (atual < menor){				//Codincao para defenir o menor valor
+				menor = atual;				//Variavel que recebe o menor valor até o momento
+			} 
+		}
+	
+		media = soma/10;					//Variavel que realiza e armazena a media dos valore
+
+		System.out.println("media: " + media);
+		System.out.println("maior: " + maior);
+		System.out.println("menor: " + menor);		
+	}
+}
